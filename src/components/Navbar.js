@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Link } from 'react-router-dom';
 
 export class Navbar extends Component {
   render() {
@@ -8,37 +9,34 @@ export class Navbar extends Component {
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
   <div className="container-fluid">
-    <a className="navbar-brand" style={{fontSize:"30px"}} href="/">GoNews</a>
+    <Link className="navbar-brand" style={{fontSize:"30px"}} to="/general">GoNews</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/">Technology</a>
+          <Link className="nav-link active" aria-current="page" to="/technology">Technology</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" href="/">Health</a>
+          <Link className="nav-link active" to="/health">Health</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" href="/">Business</a>
+          <Link className="nav-link active" to="/entertainment">Entertainment</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" href="/">Entertainment</a>
+          <Link className="nav-link active" to="/general">General</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" href="/">General</a>
+          <Link className="nav-link active" to="/science">Science</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" href="/">Science</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link active" href="/about">Sports</a>
+          <Link className="nav-link active" to="/sports">Sports</Link>
         </li>
       </ul>
       <form className="d-flex">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <button className="btn btn-outline-primary bg-light" type="submit">Search</button>
       </form>
     </div>
   </div>

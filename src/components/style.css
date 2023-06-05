@@ -1,0 +1,22 @@
+.body{
+    background-color: #0000ff;
+}
+.loading{
+    width: 150px;
+    height: 150px;
+    border: 25px solid gray ;
+    border-radius: 50%;
+    border-top-color: #0000ff ;
+    animation: loading 1.5s ease infinite;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 600px;
+}
+@keyframes loading {
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}

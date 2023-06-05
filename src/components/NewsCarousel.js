@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import NewsImgData from './components/NewsImgData';
-import Spinner from './components/Spinner';
+import NewsImgData from './NewsImgData'
+import Spinner from './Spinner';
 
 export class NewsCarousel extends Component {
     constructor(){
