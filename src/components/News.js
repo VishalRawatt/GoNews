@@ -64,7 +64,7 @@ export class News extends Component {
   render() {
     return (
       <div className='container my-3'>
-        <h1 className='text-center' style={{fontSize:"50px" , color:"#000" , margin:'20px 0px'}}>GoNews Top Headlines</h1>
+        <h1 className='text-center' style={{fontSize:"50px" , margin:'20px 0px' , color:"#051d4a"}}>GoNews Top Headlines</h1>
         {this.state.loading && <Spinner/>}
         <div className='row'>
         {!this.state.loading && this.state.articles?.map((element)=>{

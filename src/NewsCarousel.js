@@ -46,8 +46,8 @@ export class NewsCarousel extends Component {
   render() {
     return (
       <>
+      <h1 className='text-center' style={{backgroundColor:"#0762f6" ,color:"white" ,fontSize:"50px"}}>News Highlights</h1>
         {this.state.loading && <Spinner/>}
-        <h1 className='text-center'>Top News Highlights</h1>
         <div className='row'>
             {!this.state.loading && this.state.articles?.map((item)=>{
                 return <div className='col-md-12' key={item.url}>
