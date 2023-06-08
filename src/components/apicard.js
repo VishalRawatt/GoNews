@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Apicard() {
 const [mydata,mydatafunc]=useState([]);
 useEffect(()=>{
-    axios.get('').then((element)=>{
+    axios.get('https://jsonplaceholder.typicode.com/photos').then((element)=>{
         console.log(element.data);
         mydatafunc(element.data);
         })
@@ -24,7 +24,7 @@ useEffect(()=>{
                           <div className="card-body">
                             <h5 className="card-title">{title}...</h5>
                             <p className="card-text">{description}...</p>
-                            <a href={`${url}`} target="_blank" rel="noreferrer" className="btn btn-sm btn-primary">Go somewhere</a>
+                            <Link to={`${url}`} target="_blank" rel="noreferrer" className="btn btn-sm btn-primary">Go somewhere</Link>
                           </div>
                           </div>
                           </div>

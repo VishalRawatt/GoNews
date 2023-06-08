@@ -12,14 +12,14 @@ export class NewsCarousel extends Component {
         }
     }
     async componentDidMount(){
-        let url = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=e34a5c699a854c5b9e78c565c27f2f1b&page=1&pageSize=${this.props.pageSize}` ;
+        let url = `https://newsapi.org/v2/everything?q=apple&from=2023-06-07&to=2023-06-07&sortBy=popularity&apiKey=e34a5c699a854c5b9e78c565c27f2f1b&page=1&pageSize=${this.props.pageSize}` ;
         this.setState({loading:true})
         let data = await fetch(url) ;
         let parsedData = await data.json() ;
         this.setState({articles : parsedData.articles, totalArticleCount : parsedData.totalResults , loading:false})
       }
       handlePrevious = async () => {
-        let url = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=e34a5c699a854c5b9e78c565c27f2f1b&page=${this.state.page +1}&pageSize=${this.props.pageSize}` ;
+        let url = `https://newsapi.org/v2/everything?q=apple&from=2023-06-07&to=2023-06-07&sortBy=popularity&apiKey=e34a5c699a854c5b9e78c565c27f2f1b&page=${this.state.page +1}&pageSize=${this.props.pageSize}` ;
         this.setState({loading:true})
         let data = await fetch(url) ;
         let parsedData = await data.json() ;
@@ -31,7 +31,7 @@ export class NewsCarousel extends Component {
         })
       }
        handleNext = async() => {
-        let url = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=e34a5c699a854c5b9e78c565c27f2f1b&page=${this.state.page +1}&pageSize=${this.props.pageSize}` ;
+        let url = `https://newsapi.org/v2/everything?q=apple&from=2023-06-07&to=2023-06-07&sortBy=popularity&apiKey=e34a5c699a854c5b9e78c565c27f2f1b&page=${this.state.page +1}&pageSize=${this.props.pageSize}` ;
         this.setState({loading:true})
         let data = await fetch(url) ;
         let parsedData = await data.json() ;
