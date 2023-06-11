@@ -1,16 +1,13 @@
-import React, { Component } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import React from 'react';
 import image from './photo.png' ;
 
-export class Newsitem extends Component {
-  render() {
-    let { title, description, imageUrl, newsUrl, date, author, source } = this.props;
+const Newsitem = (props) => {
+    let { title, description, imageUrl, newsUrl, date, author, source } = props;
     return (
       <div className='my-2'>
         <div className="card my-4" style={{ width: "20rem", height: "auto" }}>
           <div style={{display:"flex", justifyContent:"flex-end", position:"absolute", right:0}}>
-            <span class="badge rounded-pill bg-primary">{source}
+            <span className="badge rounded-pill bg-primary">{source}
             </span>
             </div>
           <img src={!imageUrl ? `${image}` : imageUrl} className="card-img-top" alt="..." width="250px" height="150px" />
@@ -25,7 +22,7 @@ export class Newsitem extends Component {
       </div>
     )
   }
-}
+
 
 
 export default Newsitem

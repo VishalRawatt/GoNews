@@ -9,7 +9,7 @@
     border-top-color: #0000ff ;
     animation: loading 1.5s ease infinite;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 1000px;
     margin-left: 600px;
 }
 @keyframes loading {
