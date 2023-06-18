@@ -28,8 +28,7 @@ const News = (props) =>{
     setloading(false);
     props.setProgress(100)
   }
-  useEffect(() =>{ 
-    //eslint-disable-next-line
+  useEffect(() =>{
   updateNews();
 },[])
   const fetchMoreData = async () => {

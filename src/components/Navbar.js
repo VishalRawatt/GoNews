@@ -2,6 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js'
 import { Link } from 'react-router-dom';
+import './style.css'
 
 const Navbar = (props) => {
   return (
@@ -30,10 +31,6 @@ const Navbar = (props) => {
                 <Link className="nav-link active" to="/sports">Sports</Link>
               </li>
             </ul>
-            <form className="d-flex">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-outline-primary bg-light" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
