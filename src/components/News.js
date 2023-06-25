@@ -29,8 +29,8 @@ const News = (props) =>{
     props.setProgress(100)
   }
   useEffect(() =>{
-  updateNews();
-},[])
+    updateNews()
+},[]);
   const fetchMoreData = async () => {
     const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=e34a5c699a854c5b9e78c565c27f2f1b&page=${page+1}&pageSize=${props.pageSize}`;
     setpage(page+1)
