@@ -9,7 +9,7 @@ const Navbar = (props) => {
     <div>
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
         <div className="container-fluid">
-          <Link className="navbar-brand" style={{ fontSize: "30px" }} to="/general">GoNews</Link>
+          <Link className="navbar-brand" style={{ fontSize: "30px" ,marginLeft:"20px" }} to="/">World<span style={{color: "#b3f2ff" , fontSize: "35px"}}>News</span></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

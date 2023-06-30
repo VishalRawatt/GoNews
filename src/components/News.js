@@ -8,7 +8,7 @@ const News = (props) =>{
   const[articles,setarticles] = useState([])
   const[loading,setloading] = useState(true)
   const[page,setpage] = useState(1)
-  const[totalResults,settotalResults] = useState(0)
+  const[totalArticles,settotalArticles] = useState(0)
   // document.title = `${capitalizeFirstLetter(props.category)} - GoNewss`;
 
   const capitalizeFirstLetter = (string) =>{
@@ -24,7 +24,7 @@ const News = (props) =>{
     let parsedData = await data.json();
     props.setProgress(70)
     setarticles(parsedData.articles);
-    settotalResults(parsedData.totalResults);
+    settotalArticles(parsedData.totalArticles);
     setloading(false);
     props.setProgress(100)
   }
@@ -38,18 +38,17 @@ const News = (props) =>{
     let data = await fetch(url);
     let parsedData = await data.json();
     setarticles(articles.concat(parsedData.articles))
-    settotalResults(parsedData.totalResults);
+    settotalArticles(parsedData. totalArticles);
     setloading(false);
   };
     return (
       <>
-        <h1 className='text-center' style={{ fontSize: "50px", margin: '20px 0px', color: "#051d4a" , marginTop: "80px" }}>GoNews-Top  {capitalizeFirstLetter(props.category)} Headlines</h1>
-
+        <h1 className='text-center' style={{ fontSize: "50px", margin: '20px 0px', color: "#051d4a" , marginTop: "80px" }}>WorldNews-{capitalizeFirstLetter(props.category)} Headlines</h1>
         {/* {.loading && <Spinner />} */}
         <InfiniteScroll
           dataLength={articles.length}
           next={fetchMoreData}
-          hasMore={articles.length !== totalResults}
+          hasMore={articles.length !==  totalArticles}
           loader={<h4><Spinner/></h4>}>
         <div className='container'>
         <div className='row'>
@@ -65,13 +64,11 @@ const News = (props) =>{
     )
   }
 News.defaultProps = {
-  country: 'in',
   pageSize: 6,
   category: 'general',
-  totalResults: 0
+   totalArticles: 0
 }
 News.propTypes = {
-  country: PropTypes.string,
   pageSize: PropTypes.number,
   category: PropTypes.string
 }

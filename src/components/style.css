@@ -1,10 +1,10 @@
 body{
-    background-color: #63bdf9;
+    background-color: white;
 }
 .loading{
-    width: 100px;
-    height: 100px;
-    border: 20px solid gray ;
+    width: 110px;
+    height: 110px;
+    border: 17px solid gray ;
     border-radius: 50%;
     border-top-color: #0000ff ;
     animation: loading 1.5s ease infinite;
@@ -20,7 +20,10 @@ body{
 }
 .nav-item{
     margin: auto;
-    margin-left: 50px;
+    margin-left: 60px;
     font-size: 20px;
+}
+.card{
+    background-color: whitesmoke;
 }
 

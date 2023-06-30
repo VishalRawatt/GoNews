@@ -4,7 +4,7 @@ import image from './photo.png' ;
 const Newsitem = (props) => {
     let { title, description, imageUrl, newsUrl, date, author, source } = props;
     return (
-      <div className='my-2'>
+      <div className='my-2' >
         <div className="card my-4" style={{ width: "20rem", height: "auto" }}>
           <div style={{display:"flex", justifyContent:"flex-end", position:"absolute", right:0}}>
             <span className="badge rounded-pill bg-primary">{source}
