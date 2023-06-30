@@ -17,7 +17,7 @@ const News = (props) =>{
   }
   const updateNews = async() =>{
     props.setProgress(10)
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=e34a5c699a854c5b9e78c565c27f2f1b&page=${page}&pageSize=${props.pageSize}`;
+    const url = `https://gnews.io/api/v4/top-headlines?category=${props.category}&apikey=3b3c568ce889717c2fc22918f69ffad0&page=${page}&pageSize=${props.pageSize}`;
     setloading(true);
     props.setProgress(30)
     let data = await fetch(url);
@@ -32,7 +32,7 @@ const News = (props) =>{
     updateNews()
 },[]);
   const fetchMoreData = async () => {
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=e34a5c699a854c5b9e78c565c27f2f1b&page=${page+1}&pageSize=${props.pageSize}`;
+    const url = `https://gnews.io/api/v4/top-headlines?category=${props.category}&apikey=3b3c568ce889717c2fc22918f69ffad0&page=${page}&pageSize=${props.pageSize}`;
     setpage(page+1)
     setloading(true);
     let data = await fetch(url);
@@ -55,7 +55,7 @@ const News = (props) =>{
         <div className='row'>
           {!loading && articles?.map((element) => {
             return <div className='col-md-4' key={element.url}>
-              <Newsitem title={element.title} description={element.description} imageUrl={element.urlToImage} author={element.author} date={element.publishedAt} newsUrl={element.url} source={element.source.name} />
+              <Newsitem title={element.title} description={element.description} imageUrl={element.image} author={element.source.name} date={element.publishedAt} newsUrl={element.url} source={element.source.name} />
             </div>
           })}
           </div>
